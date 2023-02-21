@@ -4,6 +4,15 @@ const userSchema = new mongoose.Schema({
   username: String,
   password: String,
   token: String,  
+  timbers: [
+    {
+      author: String,
+      content: String,
+      token: String,
+      isLiked: Boolean,
+
+    }
+  ]
 });
 
 // Modèle

@@ -1,25 +1,26 @@
-var express = require('express');
+/*var express = require('express');
 var router = express.Router();
 
 require('../models/connection');
-const User = require('../models/users');
+const User = require('../models/timbers');
 const { checkBody } = require('../modules/checkBody');
 const uid2 = require('uid2');
 const bcrypt = require('bcrypt');
 
-router.post('/signup', (req, res) => {
-  if (!checkBody(req.body, ['username', 'password'])) {
+router.post('/publish', (req, res) => {
+  if (!checkBody(req.body, ['content'])) {
     res.json({ result: false, error: 'Missing or empty fields' });
     return;
   }
 
   // Check if the user has not already been registered
-  User.findOne({ username: req.body.username }).then(data => {
+  User.findOne({ author: req.body.author }).then(data => {
     if (data === null) {
       const hash = bcrypt.hashSync(req.body.password, 10);
+      const author = 
 
-      const newUser = new User({
-        username: req.body.username,
+      const newTimber = new Timber({
+        author: req.body.username,
         password: hash,
         token: uid2(32),
       });
@@ -52,7 +53,7 @@ router.post('/signin', (req, res) => {
 router.get('/likes/:token', (req, res) => {
   User.findOne({ token: req.params.token }).then(data => {
     if (data) {
-      res.json({ result: true, canBookmark: data.canBookmark });
+      res.json({ result: true, likes: data.likes });
     } else {
       res.json({ result: false, error: 'User not found' });
     }
@@ -60,3 +61,4 @@ router.get('/likes/:token', (req, res) => {
 });
 
 module.exports = router;
+*/
