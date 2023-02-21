@@ -23,7 +23,8 @@
     "prop-types": "^15.8.1",
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
-    "uid2": "^1.0.0"
+    "uid2": "^1.0.0",
+    "vercel": "^28.16.2"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
