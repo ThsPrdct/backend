@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www"
@@ -15,7 +15,7 @@
     "cors": "^2.8.5",
     "debug": "^2.6.9",
     "dotenv": "^16.0.1",
-    "express": "^4.16.1",
+    "express": "^4.18.2",
     "express-validator": "^6.15.0",
     "mongoose": "^6.9.2",
     "morgan": "^1.9.1",
@@ -23,8 +23,7 @@
     "prop-types": "^15.8.1",
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
-    "uid2": "^1.0.0",
-    "vercel": "^28.16.2"
+    "uid2": "^1.0.0"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -33,9 +32,5 @@
     "@types/morgan": "^1.9.4",
     "jest": "^28.1.1",
     "supertest": "^6.2.3"
-  },
-  "main": "index.js",
-  "repository": "https://github.com/ThsPrdct/banckend.git",
-  "author": "ThsPrdct <thomas.prodct@gmail.com>",
-  "license": "MIT"
+  }
 }

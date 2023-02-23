@@ -1,21 +1,14 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
+const Schema = mongoose.Schema;
+const Capsule = require("./capsules");
 
 const userSchema = new mongoose.Schema({
   username: String,
   password: String,
-  token: String,  
-  timbers: [
-    {
-      author: String,
-      content: String,
-      token: String,
-      isLiked: Boolean,
-
-    }
-  ]
+  token: String,
+  capsules: { type: Schema.Types.ObjectId, ref: "capsules" },
 });
 
 // Modèle
-const User = mongoose.model('users', userSchema);
-
+const User = mongoose.model("users", userSchema);
 module.exports = User;
