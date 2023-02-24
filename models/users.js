@@ -6,7 +6,7 @@ const userSchema = new mongoose.Schema({
   username: String,
   password: String,
   token: String,
-  capsules: { type: Schema.Types.ObjectId, ref: "capsules" },
+  launches: [{ type: Schema.ObjectId, ref: "capsules" }],
 });
 
 // Modèle

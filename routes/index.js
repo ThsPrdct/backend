@@ -1,6 +1,17 @@
 var express = require("express");
 var router = express.Router();
+const Capsule = require("../models/capsules");
 
-const fetch = require("node-fetch");
+router.get("/capsules", (req, res) => {
+  Capsule.find().then((data) => {
+    if (data.status === "ok") {
+      res.json({ capsules: data.capsules });
+    } else {
+      res.json({
+        capsules: [],
+      });
+    }
+  });
+});
 
 module.exports = router;

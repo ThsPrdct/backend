@@ -8,7 +8,7 @@ require("./models/connections");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
-var launchesRouter = require("./routes/launches");
+var capsulesRouter = require("./routes/capsules");
 /*var timbersRouter = require('./routes/timbers');*/
 
 var app = express();
@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/lanches", launchesRouter);
+app.use("/capsules", capsulesRouter);
 /*app.use('/timbers', timbersRouter);*/
 
 module.exports = app;
